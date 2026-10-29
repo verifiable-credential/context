@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    
+    "VerifiableCredentialExtension": {
+      "@id": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#VerifiableCredentialExtension",
+      "@context": {
+        "name": "http://schema.org/name",
+        "email": "http://schema.org/email",
+        "birthDate": {
+          "@id": "http://schema.org/birthDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "image": {
+          "@id": "http://schema.org/image",
+          "@type": "@id"
+        },
+        "validation": {
+          "@id": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#validation",
+          "@context": {
+            "signature": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#signature",
+            "validUntil": {
+              "@id": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#validUntil",
+              "@type": "http://www.w3.org/2001/XMLSchema#date"
+            },
+            "validator": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#validator",
+            "validatorId": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#validatorId"
+          }
+        },
+        "credentialUnit": {
+          "@id": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#credentialUnit",
+          "@context": {
+            "name": "http://schema.org/name",
+            "competences": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#competences",
+            "validation": "https://raw.githubusercontent.com/verifiable-credential/context/main/extensions.json#validation"
+          }
+        }
+      }
+    }
+  }
+}
