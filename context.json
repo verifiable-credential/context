@@ -1,0 +1,107 @@
+{
+  "@context": {
+    "@protected": true,
+    "Issuer": {
+      "@id": "https://schema.org/Organization",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "name": "https://schema.org/name",
+        "image": {
+          "@id": "https://schema.org/image",
+          "@type": "@id"
+        },
+        "validation": {
+          "@id": "urn:mcu:validation",
+          "@context": {
+            "@protected": true,
+            "signature": "urn:mcu:signature",
+            "validUntil": {
+              "@id": "https://schema.org/expires",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "validator": "https://schema.org/issuer",
+            "validatorId": {
+              "@id": "https://schema.org/identifier",
+              "@type": "@id"
+            }
+          }
+        }
+      }
+    },
+    "CredentialUnit": {
+      "@id": "urn:mcu:CredentialUnit",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "name": "https://schema.org/name",
+        "competences": "https://schema.org/description",
+        "validation": {
+          "@id": "urn:mcu:validation",
+          "@context": {
+            "@protected": true,
+            "signature": "urn:mcu:signature",
+            "validUntil": {
+              "@id": "https://schema.org/expires",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
+            "validator": "https://schema.org/issuer",
+            "validatorId": {
+              "@id": "https://schema.org/identifier",
+              "@type": "@id"
+            }
+          }
+        }
+      }
+    },
+    "VerifiableCredential": {
+      "@id": "https://www.w3.org/ns/credentials#VerifiableCredential",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "type": "@type",
+        "issuer": "urn:mcu:Issuer",
+        "validFrom": {
+          "@id": "https://schema.org/validFrom",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "validUntil": {
+          "@id": "https://schema.org/expires",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "name": "https://schema.org/name",
+        "credentialSubject": "urn:mcu:CredentialSubject",
+        "credentialUnit": "urn:mcu:CredentialUnit"
+      }
+    },
+    "CredentialCollection": {
+      "@id": "urn:mcu:CredentialCollection",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "name": "https://schema.org/name",
+        "credentials": {
+          "@id": "urn:mcu:credentials",
+          "@type": "@id"
+        }
+      }
+    },
+    "CredentialSubject": {
+      "@id": "https://www.w3.org/ns/credentials#CredentialSubject",
+      "@context": {
+        "@protected": true,
+        "id": "@id",
+        "name": "https://schema.org/name",
+        "email": "https://schema.org/email",
+        "birthDate": {
+          "@id": "https://schema.org/birthDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "image": {
+          "@id": "https://schema.org/image",
+          "@type": "@id"
+        }
+      }
+    }
+  }
+}
